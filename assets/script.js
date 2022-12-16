@@ -1,4 +1,3 @@
-
 // Store apiKey
 var apiKey = "af3a22844450873d5d2169fdef220113"
 
@@ -60,12 +59,60 @@ $(buttonEl).on("click", function(event) {
             // Humidity
             var humidityToday = responseWeather.list[0].main.humidity;
             console.log(humidityToday);
+            
+            // Store values for the 5 day forecast in an array of arrays
+
+            var fiveDayForcast = [
+                [
+                    moment(responseWeather.list[8].dt_txt).format("MMMM Do, YYYY"),
+                    responseWeather.list[8].weather[0].icon,
+                    Math.round((responseWeather.list[8].main.temp)-273.15),
+                    Math.round(responseWeather.list[8].wind.speed),
+                    responseWeather.list[8].main.humidity
+                    
+                ],
+                [
+                    moment(responseWeather.list[15].dt_txt).format("MMMM Do, YYYY"),
+                    responseWeather.list[15].weather[0].icon,
+                    Math.round((responseWeather.list[15].main.temp)-273.15),
+                    Math.round(responseWeather.list[15].wind.speed),
+                    responseWeather.list[15].main.humidity
+                ],   
+                [
+                    moment(responseWeather.list[23].dt_txt).format("MMMM Do, YYYY"),
+                    responseWeather.list[23].weather[0].icon,
+                    Math.round((responseWeather.list[23].main.temp)-273.15),
+                    Math.round(responseWeather.list[23].wind.speed),
+                    responseWeather.list[23].main.humidity
+                ],
+                [
+                    moment(responseWeather.list[31].dt_txt).format("MMMM Do, YYYY"),
+                    responseWeather.list[31].weather[0].icon,
+                    Math.round((responseWeather.list[31].main.temp)-273.15),
+                    Math.round(responseWeather.list[31].wind.speed),
+                    responseWeather.list[31].main.humidity
+                ],
+                [
+                    moment(responseWeather.list[39].dt_txt).format("MMMM Do, YYYY"),
+                    responseWeather.list[39].weather[0].icon,
+                    Math.round((responseWeather.list[39].main.temp)-273.15),
+                    Math.round(responseWeather.list[39].wind.speed),
+                    responseWeather.list[39].main.humidity
+                ],
+            ]
+            console.log(fiveDayForcast);
+
+            console.log(fiveDayForcast[1][2])
+
+            for (var i=0; i<fiveDayForcast.length;i++) {
+                $("#forecast").append('<div class="card" style="width: 18rem;"></div').attr("input-day","" + i + "");
+                $(".card").append("fkasjdklasjdklsa")
+            }
 
     })
 
 })
 })
-
 // Store user input as a variable
 // Convert city to Lat and Lon coordinates and store in variable
 // Get response from API Geocode Key for coordinates and store in varable
