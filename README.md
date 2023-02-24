@@ -1,4 +1,4 @@
-# weather-dashboard
+# Weather Dashboard
 
 The weather dashboard uses the openWeather API and Geocoder API to, when given a location by the user, output a 5 day weather forecast. 
 The output incldes an icon which describes the weather, the current temperature, windepeed and humidity. 
