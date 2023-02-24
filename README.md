@@ -9,4 +9,5 @@ The user will need an openWeather API key in order to use the dashboard, when op
 - Imporve the appearance of the site
 
 
-https://github.com/tobias-firth/weather-dashboard/blob/main/README.md
+https://github.com/tobias-firth/weather-dashboard
+https://tobias-firth.github.io/weather-dashboard/
