@@ -1,5 +1,5 @@
 // Store apiKey
-var apiKey = "af3a22844450873d5d2169fdef220113"
+var apiKey = ""
 
 // Get element from the ID
 var buttonEl = $("#search-button");
