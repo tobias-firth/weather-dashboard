@@ -100,26 +100,67 @@ $(buttonEl).on("click", function(event) {
                     responseWeather.list[39].main.humidity
                 ],
             ]
-            console.log(fiveDayForcast);
+            
+            console.log(fiveDayForcast[0])
+            
+            $("#today").append(`<div class="card" style="width: 18rem;">
+                                    <h5 class="card-title">${cityName}</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">${dateToday}</h6>
+                                    <img class="card-img-top" src="${iconTodayURL}" alt="Weather Icon">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Temperature: ${tempToday}°C</li>
+                                    <li class="list-group-item">Windspeed: ${windToday}km/h</li>
+                                    <li class="list-group-item">Humidity: ${humidityToday}%</li>
+                                </ul>
+                                </div>`)
 
-            console.log(fiveDayForcast[1][2])
-
-            for (var i=0; i<fiveDayForcast.length;i++) {
-                $("#forecast").append('<div class="card" style="width: 18rem;"></div').attr("input-day","" + i + "");
-                $(".card").append("fkasjdklasjdklsa")
-            }
-
+            $("#forecast").append(`<div class="card" style="width: 18rem;">
+                                    <h5 class="card-title">${fiveDayForcast[0][0]}</h5>
+                                    <img class="card-img-top" src="http://openweathermap.org/img/w/${fiveDayForcast[0][1]}.png" alt="Weather Icon">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Temperature: ${fiveDayForcast[0][2]}°C</li>
+                                        <li class="list-group-item">Windspeed: ${fiveDayForcast[0][3]}km/h</li>
+                                        <li class="list-group-item">Humidity: ${fiveDayForcast[0][4]}%</li>
+                                    </ul>
+                                    </div>
+                                    <div class="card" style="width: 18rem;">
+                                    <h5 class="card-title">${fiveDayForcast[1][0]}</h5>
+                                    <img class="card-img-top" src="http://openweathermap.org/img/w/${fiveDayForcast[1][1]}.png" alt="Weather Icon">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Temperature: ${fiveDayForcast[1][2]}°C</li>
+                                        <li class="list-group-item">Windspeed: ${fiveDayForcast[1][3]}km/h</li>
+                                        <li class="list-group-item">Humidity: ${fiveDayForcast[1][4]}%</li>
+                                    </ul>
+                                    </div>
+                                    <div class="card" style="width: 18rem;">
+                                    <h5 class="card-title">${fiveDayForcast[2][0]}</h5>
+                                    <img class="card-img-top" src="http://openweathermap.org/img/w/${fiveDayForcast[2][1]}.png" alt="Weather Icon">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Temperature: ${fiveDayForcast[2][2]}°C</li>
+                                        <li class="list-group-item">Windspeed: ${fiveDayForcast[2][3]}km/h</li>
+                                        <li class="list-group-item">Humidity: ${fiveDayForcast[2][4]}%</li>
+                                    </ul>
+                                    </div>
+                                    <div class="card" style="width: 18rem;">
+                                    <h5 class="card-title">${fiveDayForcast[3][0]}</h5>
+                                    <img class="card-img-top" src="http://openweathermap.org/img/w/${fiveDayForcast[3][1]}.png" alt="Weather Icon">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Temperature: ${fiveDayForcast[3][2]}°C</li>
+                                        <li class="list-group-item">Windspeed: ${fiveDayForcast[3][3]}km/h</li>
+                                        <li class="list-group-item">Humidity: ${fiveDayForcast[3][4]}%</li>
+                                    </ul>
+                                    </div>
+                                    <div class="card" style="width: 18rem;">
+                                    <h5 class="card-title">${fiveDayForcast[4][0]}</h5>
+                                    <img class="card-img-top" src="http://openweathermap.org/img/w/${fiveDayForcast[4][1]}.png" alt="Weather Icon">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Temperature: ${fiveDayForcast[4][2]}°C</li>
+                                        <li class="list-group-item">Windspeed: ${fiveDayForcast[4][3]}km/h</li>
+                                        <li class="list-group-item">Humidity: ${fiveDayForcast[4][4]}%</li>
+                                    </ul>
+                                    </div>`)
     })
 
 })
 })
-// Store user input as a variable
-// Convert city to Lat and Lon coordinates and store in variable
-// Get response from API Geocode Key for coordinates and store in varable
-// Get response from 
-// Print resutls
 
-// Current weather
-// 5 Day Forcast (Array of objects?)
-
-//Search History (????????)
